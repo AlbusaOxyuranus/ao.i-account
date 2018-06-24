@@ -25,13 +25,24 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ao.i-account.service", "ao.
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ao.i-account.db", "ao.i-account.db\ao.i-account.db.sqlproj", "{4F10378A-A874-4ABA-86D7-474E4426B7BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B6CB6D45-A775-4524-B421-8940DAC6105A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B6CB6D45-A775-4524-B421-8940DAC6105A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CB6D45-A775-4524-B421-8940DAC6105A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CB6D45-A775-4524-B421-8940DAC6105A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{4F10378A-A874-4ABA-86D7-474E4426B7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F10378A-A874-4ABA-86D7-474E4426B7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F10378A-A874-4ABA-86D7-474E4426B7BA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4F10378A-A874-4ABA-86D7-474E4426B7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F10378A-A874-4ABA-86D7-474E4426B7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F10378A-A874-4ABA-86D7-474E4426B7BA}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
