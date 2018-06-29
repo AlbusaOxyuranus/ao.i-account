@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="DataContext.cs" />
     <Compile Include="IDataContext.cs" />
+    <Compile Include="IMode.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

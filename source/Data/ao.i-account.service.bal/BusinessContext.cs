@@ -5,9 +5,10 @@ namespace ao.i_account.service.bal
 {
     public sealed class BusinessContext : IBusinessContext
     {
-        public BusinessContext()
+        public BusinessContext(IMode mode)
         {
-            DataContext = new DataContext();
+            var connectionString = mode.ConnectionString;
+            DataContext = new DataContext(connectionString);
         }
 
         private IDataContext DataContext { get; }
@@ -34,9 +35,9 @@ namespace ao.i_account.service.bal
 
         #endregion
 
-        public TIEntity Add<TIEntity>()
+        public TIEntity Add<TIEntity>(TIEntity entity)
         {
-            throw new NotImplementedException();
+           return DataContext.Insert(entity);
         }
 
         public TIEntity Get<TIEntity>()
