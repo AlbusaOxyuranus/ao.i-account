@@ -6,7 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ao.i-account.service", "ao.i-account.service\", "{B6CB6D45-A775-4524-B421-8940DAC6105A}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		ProjectReferences = "{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}|ao.i-account.service.models.dll;"
+		ProjectReferences = "{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}|ao.i-account.service.models.dll;{AF496924-DDF3-44A6-B362-55479735DA8C}|ao.i_account.service.bal.dll;{0F1AF2B6-2747-4E55-9F90-7A8065896EE0}|ao.i_account.service.dal.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_62786"
 		Debug.AspNetCompiler.PhysicalPath = "ao.i-account.service\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62786\"
@@ -43,6 +43,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i-account.service.dal.tests", "..\tests\ao.i-account.service.dal.tests\ao.i-account.service.dal.tests.csproj", "{D0832D90-E0B4-4701-A285-667FFE7A04F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i-account.service.models.tests", "..\tests\ao.i-account.service.models.tests\ao.i-account.service.models.tests.csproj", "{E0712F81-32F8-4CD7-A109-CA05EF623472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "..\tests\UnitTestProject1\UnitTestProject1.csproj", "{D13E882E-E9E8-4439-A38A-821EE10BB428}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B6CB6D45-A775-4524-B421-8940DAC6105A} = {B6CB6D45-A775-4524-B421-8940DAC6105A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,6 +89,10 @@ Global
 		{E0712F81-32F8-4CD7-A109-CA05EF623472}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0712F81-32F8-4CD7-A109-CA05EF623472}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0712F81-32F8-4CD7-A109-CA05EF623472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13E882E-E9E8-4439-A38A-821EE10BB428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13E882E-E9E8-4439-A38A-821EE10BB428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13E882E-E9E8-4439-A38A-821EE10BB428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13E882E-E9E8-4439-A38A-821EE10BB428}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +105,7 @@ Global
 		{93545499-65D2-4A31-906A-ADA4EC1534ED} = {BA5B932E-5B98-487D-B423-D8B9AF5BD399}
 		{D0832D90-E0B4-4701-A285-667FFE7A04F5} = {BA5B932E-5B98-487D-B423-D8B9AF5BD399}
 		{E0712F81-32F8-4CD7-A109-CA05EF623472} = {BA5B932E-5B98-487D-B423-D8B9AF5BD399}
+		{D13E882E-E9E8-4439-A38A-821EE10BB428} = {BA5B932E-5B98-487D-B423-D8B9AF5BD399}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36A9A7C8-5996-4803-BE0A-C0FD6C6FCBB5}

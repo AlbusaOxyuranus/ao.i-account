@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Configuration;
+using ao.i_account.service.bal;
+using ao.i_account.service.dal;
 using ao.i_account.service.models;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "AccountService" in code, svc and config file together.
@@ -6,7 +9,10 @@ public class AccountService : IAccountService
 {
     public void CreateUser(User user)
     {
-        throw new NotImplementedException();
+        using (var bc = new BusinessContext(new DbMode()))
+        {
+            bc.Add(user);
+        }
     }
 
     public void GetUser(User user)
@@ -36,4 +42,15 @@ public class AccountService : IAccountService
 		}
 		return composite;
 	}
+}
+
+public class DbMode: IMode
+{
+    public string ConnectionString
+    {
+        get
+        {
+            return ConfigurationManager.ConnectionStrings["Prod-db"].ConnectionString;
+        }
+    }
 }
