@@ -2,6 +2,6 @@
 {
     public interface IMode
     {
-        string ConnectionString { get; set; }
+        string ConnectionString { get; }
     }
 }

@@ -49,6 +49,10 @@
       <Project>{0F1AF2B6-2747-4E55-9F90-7A8065896EE0}</Project>
       <Name>ao.i-account.service.dal</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ao.i-account.service.models\ao.i-account.service.models.csproj">
+      <Project>{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}</Project>
+      <Name>ao.i-account.service.models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

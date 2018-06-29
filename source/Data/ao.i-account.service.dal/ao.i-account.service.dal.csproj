@@ -32,6 +32,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,8 +46,21 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="IDataContext.cs" />
     <Compile Include="IMode.cs" />
+    <Compile Include="Mapper.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usp\UserUspBase.cs" />
+    <Compile Include="Usp\UspBase.cs" />
+    <Compile Include="Usp\UspParam.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ao.i-account.service.models\ao.i-account.service.models.csproj">
+      <Project>{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}</Project>
+      <Name>ao.i-account.service.models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

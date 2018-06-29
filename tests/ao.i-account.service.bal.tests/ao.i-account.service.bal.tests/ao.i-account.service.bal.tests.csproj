@@ -45,19 +45,30 @@
       <HintPath>..\..\..\source\packages\MSTest.TestFramework.1.2.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessContextTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestMode.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\Data\ao.i-account.service.bal\ao.i-account.service.bal.csproj">
       <Project>{AF496924-DDF3-44A6-B362-55479735DA8C}</Project>
       <Name>ao.i-account.service.bal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\source\Data\ao.i-account.service.dal\ao.i-account.service.dal.csproj">
+      <Project>{0F1AF2B6-2747-4E55-9F90-7A8065896EE0}</Project>
+      <Name>ao.i-account.service.dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\source\Data\ao.i-account.service.models\ao.i-account.service.models.csproj">
+      <Project>{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}</Project>
+      <Name>ao.i-account.service.models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

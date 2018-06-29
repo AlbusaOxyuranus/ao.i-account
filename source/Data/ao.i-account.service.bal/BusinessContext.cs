@@ -1,5 +1,6 @@
 ﻿using System;
 using ao.i_account.service.dal;
+using ao.i_account.service.models;
 
 namespace ao.i_account.service.bal
 {
@@ -35,7 +36,7 @@ namespace ao.i_account.service.bal
 
         #endregion
 
-        public TIEntity Add<TIEntity>(TIEntity entity)
+        public TEntity Add<TEntity>(TEntity entity) where TEntity: class, IEntity
         {
            return DataContext.Insert(entity);
         }

@@ -1,11 +1,12 @@
 ﻿using System;
+using ao.i_account.service.models;
 
 namespace ao.i_account.service.bal
 {
     public interface IBusinessContext : IDisposable
     {
-        TIEntity Add<TIEntity>(TIEntity entity);
-        TIEntity Get<TIEntity>();
+        TEntity Add<TEntity>(TEntity entity) where TEntity : class, IEntity;
+         TIEntity Get<TIEntity>();
         void Update<TIEntity>();
         void Delete<TIEntity>();
     }

@@ -3,7 +3,7 @@
 namespace ao.i_account.service.models
 {
     [DataContract]
-    public class User
+    public class User : IEntity
     {
         [DataMember] public int UserId { get; set; }
         [DataMember] public string Username { get; set; }

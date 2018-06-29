@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using ao.i_account.service.models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ao.i_account.service.bal.tests
 {
@@ -36,6 +37,10 @@ namespace ao.i_account.service.bal.tests
         [TestMethod]
         public void InsertEntity_Test()
         {
+            using (var bc = new BusinessContext(new TestMode()))
+            {
+                bc.Add<User>(new User(){Username = "Denis", Password = "999"});
+            }
         }
 
         [TestMethod]
