@@ -39,7 +39,8 @@ namespace ao.i_account.service.bal.tests
         {
             using (var bc = new BusinessContext(new TestMode()))
             {
-                bc.Add<User>(new User(){Username = "Denis", Password = "999"});
+                var resultObject = bc.Add(new User {Username = "Denis", Password = "999"});
+                Assert.IsTrue(resultObject.UserId > 0);
             }
         }
 

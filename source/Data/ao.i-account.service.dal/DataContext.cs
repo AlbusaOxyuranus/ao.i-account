@@ -34,7 +34,9 @@ namespace ao.i_account.service.dal
                     insertedId = command.ExecuteScalar();
                 }
 
-                return default(TEntity); //int.Parse(insertedId.ToString());
+                var id = int.Parse(insertedId.ToString());
+                entity.SetId(id);
+                return entity; //int.Parse(insertedId.ToString());
             }
         }
 

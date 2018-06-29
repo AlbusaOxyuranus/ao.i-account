@@ -8,5 +8,9 @@ namespace ao.i_account.service.models
         [DataMember] public int UserId { get; set; }
         [DataMember] public string Username { get; set; }
         [DataMember] public string Password { get; set; }
+        public void SetId(int id)
+        {
+            UserId=id;
+        }
     }
 }
