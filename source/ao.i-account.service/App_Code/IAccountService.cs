@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 using System.ServiceModel;
-using Models;
+using ao.i_account.service.models;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IAccountService" in both code and config file together.
 [ServiceContract]
@@ -29,20 +29,20 @@ public interface IAccountService
 [DataContract]
 public class CompositeType
 {
-    bool boolValue = true;
-    string stringValue = "Hello ";
+    bool _boolValue = true;
+    string _stringValue = "Hello ";
 
     [DataMember]
     public bool BoolValue
     {
-        get { return boolValue; }
-        set { boolValue = value; }
+        get { return _boolValue; }
+        set { _boolValue = value; }
     }
 
     [DataMember]
     public string StringValue
     {
-        get { return stringValue; }
-        set { stringValue = value; }
+        get { return _stringValue; }
+        set { _stringValue = value; }
     }
 }

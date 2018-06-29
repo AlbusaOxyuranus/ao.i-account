@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ao.i-account.service", "ao.i-account.service\", "{B6CB6D45-A775-4524-B421-8940DAC6105A}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}|ao.i-account.service.models.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_62786"
 		Debug.AspNetCompiler.PhysicalPath = "ao.i-account.service\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62786\"
@@ -25,7 +26,15 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ao.i-account.service", "ao.
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ao.i-account.db", "ao.i-account.db\ao.i-account.db.sqlproj", "{4F10378A-A874-4ABA-86D7-474E4426B7BA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{91105DA5-0B4C-4ED2-99B7-9767CE5595E4}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ao.i-account.db", "Data\ao.i-account.db\ao.i-account.db.sqlproj", "{4F10378A-A874-4ABA-86D7-474E4426B7BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i-account.service.dal", "Data\ao.i-account.service.dal\ao.i-account.service.dal.csproj", "{0F1AF2B6-2747-4E55-9F90-7A8065896EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i-account.service.bal", "Data\ao.i-account.service.bal\ao.i-account.service.bal.csproj", "{AF496924-DDF3-44A6-B362-55479735DA8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i-account.service.models", "Data\ao.i-account.service.models\ao.i-account.service.models.csproj", "{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,9 +52,27 @@ Global
 		{4F10378A-A874-4ABA-86D7-474E4426B7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F10378A-A874-4ABA-86D7-474E4426B7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F10378A-A874-4ABA-86D7-474E4426B7BA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0F1AF2B6-2747-4E55-9F90-7A8065896EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F1AF2B6-2747-4E55-9F90-7A8065896EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F1AF2B6-2747-4E55-9F90-7A8065896EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F1AF2B6-2747-4E55-9F90-7A8065896EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF496924-DDF3-44A6-B362-55479735DA8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF496924-DDF3-44A6-B362-55479735DA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF496924-DDF3-44A6-B362-55479735DA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF496924-DDF3-44A6-B362-55479735DA8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F10378A-A874-4ABA-86D7-474E4426B7BA} = {91105DA5-0B4C-4ED2-99B7-9767CE5595E4}
+		{0F1AF2B6-2747-4E55-9F90-7A8065896EE0} = {91105DA5-0B4C-4ED2-99B7-9767CE5595E4}
+		{AF496924-DDF3-44A6-B362-55479735DA8C} = {91105DA5-0B4C-4ED2-99B7-9767CE5595E4}
+		{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889} = {91105DA5-0B4C-4ED2-99B7-9767CE5595E4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36A9A7C8-5996-4803-BE0A-C0FD6C6FCBB5}
