@@ -1,14 +1,37 @@
-﻿using ao.i_account.service.dal;
+﻿using System;
+using ao.i_account.service.dal;
 
 namespace ao.i_account.service.bal
 {
-    public class BusinessContext
+    public sealed class BusinessContext: IBusinessContext
     {
         public BusinessContext()
         {
             DataContext = new DataContext();
         }
 
-        public DataContext DataContext { get; protected set; }
+        private IDataContext DataContext { get; }
+
+        #region implementation IDisposable
+
+        private bool _disposed = false;
+
+
+        public void Dispose()
+        {
+            Dispose(true);
+            // ReSharper disable once GCSuppressFinalizeForTypeWithoutDestructor
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (_disposed || !disposing)
+                return;
+
+            DataContext?.Dispose();
+        }
+
+        #endregion
     }
 }

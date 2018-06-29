@@ -1,6 +1,8 @@
-﻿namespace ao.i_account.service.dal
+﻿using System;
+
+namespace ao.i_account.service.dal
 {
-    public interface IDataContext
+    public interface IDataContext : IDisposable
     {
     }
 }
