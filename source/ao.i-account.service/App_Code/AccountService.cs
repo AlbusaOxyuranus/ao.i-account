@@ -1,4 +1,5 @@
 ﻿using System;
+using Models;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "AccountService" in code, svc and config file together.
 public class AccountService : IAccountService

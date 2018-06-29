@@ -60,9 +60,12 @@
     <Folder Include="dbo" />
     <Folder Include="dbo\Programmability" />
     <Folder Include="Sctipts" />
+    <Folder Include="Sctipts\Constraints" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Sctipts\DDL - iaccount - dbo.User.sql" />
     <Build Include="Sctipts\DDL - iaccount - dbo.Contact.sql" />
+    <Build Include="dbo\Programmability\DDL - iaccount - usp - Insert_User.sql" />
+    <Build Include="Sctipts\Constraints\DDL - iaccount - dbo.User - constrains.sql" />
   </ItemGroup>
 </Project>
