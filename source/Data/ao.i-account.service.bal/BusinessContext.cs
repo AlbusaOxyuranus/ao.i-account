@@ -3,7 +3,7 @@ using ao.i_account.service.dal;
 
 namespace ao.i_account.service.bal
 {
-    public sealed class BusinessContext: IBusinessContext
+    public sealed class BusinessContext : IBusinessContext
     {
         public BusinessContext()
         {
@@ -14,7 +14,7 @@ namespace ao.i_account.service.bal
 
         #region implementation IDisposable
 
-        private bool _disposed = false;
+        private readonly bool _disposed = false;
 
 
         public void Dispose()
@@ -33,5 +33,25 @@ namespace ao.i_account.service.bal
         }
 
         #endregion
+
+        public TIEntity Add<TIEntity>()
+        {
+            throw new NotImplementedException();
+        }
+
+        public TIEntity Get<TIEntity>()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update<TIEntity>()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete<TIEntity>()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
