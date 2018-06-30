@@ -4,7 +4,7 @@ using UnitTestProject1.AccountServiceReference;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class AccountServiceTests
     {
         [TestMethod]
         public void CreateUser_Test()

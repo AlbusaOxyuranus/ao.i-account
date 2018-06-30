@@ -44,7 +44,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i-account.service.dal.te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i-account.service.models.tests", "..\tests\ao.i-account.service.models.tests\ao.i-account.service.models.tests.csproj", "{E0712F81-32F8-4CD7-A109-CA05EF623472}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "..\tests\UnitTestProject1\UnitTestProject1.csproj", "{D13E882E-E9E8-4439-A38A-821EE10BB428}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i-account.service.tests", "..\tests\UnitTestProject1\ao.i-account.service.tests.csproj", "{D13E882E-E9E8-4439-A38A-821EE10BB428}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B6CB6D45-A775-4524-B421-8940DAC6105A} = {B6CB6D45-A775-4524-B421-8940DAC6105A}
 	EndProjectSection
