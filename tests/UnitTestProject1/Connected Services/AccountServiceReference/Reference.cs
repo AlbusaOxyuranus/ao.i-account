@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UnitTestProject1.AccountServiceReference {
+namespace ao.i_account.service.tests.AccountServiceReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -156,10 +156,10 @@ namespace UnitTestProject1.AccountServiceReference {
     public interface IAccountService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateUser", ReplyAction="http://tempuri.org/IAccountService/CreateUserResponse")]
-        UnitTestProject1.AccountServiceReference.User CreateUser(UnitTestProject1.AccountServiceReference.User user);
+        ao.i_account.service.tests.AccountServiceReference.User CreateUser(ao.i_account.service.tests.AccountServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateUser", ReplyAction="http://tempuri.org/IAccountService/CreateUserResponse")]
-        System.Threading.Tasks.Task<UnitTestProject1.AccountServiceReference.User> CreateUserAsync(UnitTestProject1.AccountServiceReference.User user);
+        System.Threading.Tasks.Task<ao.i_account.service.tests.AccountServiceReference.User> CreateUserAsync(ao.i_account.service.tests.AccountServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetUser", ReplyAction="http://tempuri.org/IAccountService/GetUserResponse")]
         void GetUser(int id);
@@ -168,10 +168,10 @@ namespace UnitTestProject1.AccountServiceReference {
         System.Threading.Tasks.Task GetUserAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/UpdateUser", ReplyAction="http://tempuri.org/IAccountService/UpdateUserResponse")]
-        void UpdateUser(UnitTestProject1.AccountServiceReference.User user);
+        void UpdateUser(ao.i_account.service.tests.AccountServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/UpdateUser", ReplyAction="http://tempuri.org/IAccountService/UpdateUserResponse")]
-        System.Threading.Tasks.Task UpdateUserAsync(UnitTestProject1.AccountServiceReference.User user);
+        System.Threading.Tasks.Task UpdateUserAsync(ao.i_account.service.tests.AccountServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetData", ReplyAction="http://tempuri.org/IAccountService/GetDataResponse")]
         string GetData(int value);
@@ -180,19 +180,19 @@ namespace UnitTestProject1.AccountServiceReference {
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IAccountService/GetDataUsingDataContractResponse")]
-        UnitTestProject1.AccountServiceReference.CompositeType GetDataUsingDataContract(UnitTestProject1.AccountServiceReference.CompositeType composite);
+        ao.i_account.service.tests.AccountServiceReference.CompositeType GetDataUsingDataContract(ao.i_account.service.tests.AccountServiceReference.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IAccountService/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<UnitTestProject1.AccountServiceReference.CompositeType> GetDataUsingDataContractAsync(UnitTestProject1.AccountServiceReference.CompositeType composite);
+        System.Threading.Tasks.Task<ao.i_account.service.tests.AccountServiceReference.CompositeType> GetDataUsingDataContractAsync(ao.i_account.service.tests.AccountServiceReference.CompositeType composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAccountServiceChannel : UnitTestProject1.AccountServiceReference.IAccountService, System.ServiceModel.IClientChannel {
+    public interface IAccountServiceChannel : ao.i_account.service.tests.AccountServiceReference.IAccountService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AccountServiceClient : System.ServiceModel.ClientBase<UnitTestProject1.AccountServiceReference.IAccountService>, UnitTestProject1.AccountServiceReference.IAccountService {
+    public partial class AccountServiceClient : System.ServiceModel.ClientBase<ao.i_account.service.tests.AccountServiceReference.IAccountService>, ao.i_account.service.tests.AccountServiceReference.IAccountService {
         
         public AccountServiceClient() {
         }
@@ -213,11 +213,11 @@ namespace UnitTestProject1.AccountServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public UnitTestProject1.AccountServiceReference.User CreateUser(UnitTestProject1.AccountServiceReference.User user) {
+        public ao.i_account.service.tests.AccountServiceReference.User CreateUser(ao.i_account.service.tests.AccountServiceReference.User user) {
             return base.Channel.CreateUser(user);
         }
         
-        public System.Threading.Tasks.Task<UnitTestProject1.AccountServiceReference.User> CreateUserAsync(UnitTestProject1.AccountServiceReference.User user) {
+        public System.Threading.Tasks.Task<ao.i_account.service.tests.AccountServiceReference.User> CreateUserAsync(ao.i_account.service.tests.AccountServiceReference.User user) {
             return base.Channel.CreateUserAsync(user);
         }
         
@@ -229,11 +229,11 @@ namespace UnitTestProject1.AccountServiceReference {
             return base.Channel.GetUserAsync(id);
         }
         
-        public void UpdateUser(UnitTestProject1.AccountServiceReference.User user) {
+        public void UpdateUser(ao.i_account.service.tests.AccountServiceReference.User user) {
             base.Channel.UpdateUser(user);
         }
         
-        public System.Threading.Tasks.Task UpdateUserAsync(UnitTestProject1.AccountServiceReference.User user) {
+        public System.Threading.Tasks.Task UpdateUserAsync(ao.i_account.service.tests.AccountServiceReference.User user) {
             return base.Channel.UpdateUserAsync(user);
         }
         
@@ -245,11 +245,11 @@ namespace UnitTestProject1.AccountServiceReference {
             return base.Channel.GetDataAsync(value);
         }
         
-        public UnitTestProject1.AccountServiceReference.CompositeType GetDataUsingDataContract(UnitTestProject1.AccountServiceReference.CompositeType composite) {
+        public ao.i_account.service.tests.AccountServiceReference.CompositeType GetDataUsingDataContract(ao.i_account.service.tests.AccountServiceReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<UnitTestProject1.AccountServiceReference.CompositeType> GetDataUsingDataContractAsync(UnitTestProject1.AccountServiceReference.CompositeType composite) {
+        public System.Threading.Tasks.Task<ao.i_account.service.tests.AccountServiceReference.CompositeType> GetDataUsingDataContractAsync(ao.i_account.service.tests.AccountServiceReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
     }

@@ -1,7 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UnitTestProject1.AccountServiceReference;
+﻿using ao.i_account.service.tests.AccountServiceReference;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestProject1
+namespace ao.i_account.service.tests
 {
     [TestClass]
     public class AccountServiceTests
