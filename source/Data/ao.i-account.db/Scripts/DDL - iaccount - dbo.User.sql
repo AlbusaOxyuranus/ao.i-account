@@ -8,6 +8,10 @@ create table dbo.[User]
 	pwd NVARCHAR(100) not null,
 	create_date datetime,
 	modified_date datetime,
-	constraint PK_User primary key ([userId])	
-)
+	CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[userId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
 go

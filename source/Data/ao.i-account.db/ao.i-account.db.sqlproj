@@ -59,14 +59,32 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Programmability" />
-    <Folder Include="Sctipts" />
-    <Folder Include="Sctipts\Constraints" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Constraints" />
+    <Folder Include="dbo\Programmability\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Sctipts\DDL - iaccount - dbo.User.sql" />
-    <Build Include="Sctipts\DDL - iaccount - dbo.Contact.sql" />
-    <Build Include="dbo\Programmability\DDL - iaccount - usp - Insert_User.sql" />
-    <Build Include="Sctipts\Constraints\DDL - iaccount - dbo.User - constrains.sql" />
-    <Build Include="dbo\Programmability\DDL - iaccount - usp - Get_User.sql" />
+    <None Include="Scripts\Constraints\DDL - iaccount - dbo.UserContact_xref - constrains.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\DDL - iaccount - dbo.User.sql" />
+    <None Include="Scripts\DDL - iaccount - dbo.Contact.sql" />
+    <None Include="Scripts\Constraints\DDL - iaccount - dbo.User - constrains.sql" />
+    <None Include="Scripts\DDL - iaccount - dbo.UserContact_xref.sql" />
+    <None Include="Scripts\DDL - iaccount - dbo.Service.sql" />
+    <None Include="Scripts\DDL - iaccount - dbo.UserService_xref.sql" />
+    <None Include="Scripts\Constraints\DDL - iaccount - dbo.UserService_xref - constrains.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Script.PreDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbo\Programmability\Stored Procedures\DDL - iaccount - usp - Get_User.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbo\Programmability\Stored Procedures\DDL - iaccount - usp - Insert_User.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="DDL - iaccount - Initialization.sql" />
   </ItemGroup>
 </Project>

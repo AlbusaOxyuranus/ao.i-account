@@ -1,7 +1,4 @@
-﻿use [i-account.db]
-go
-
-if object_id('DF_User_modified_date') is not null
+﻿if object_id('DF_User_modified_date') is not null
 	alter table dbo.Person
 		drop constraint DF_User_modified_date
 go

@@ -1,7 +1,4 @@
-﻿use [i-account.db]
-go
-
-if(object_id('dbo.usp_Get_User') is not null)
+﻿if(object_id('dbo.usp_Get_User') is not null)
 	drop procedure dbo.usp_Get_User
 go
 
