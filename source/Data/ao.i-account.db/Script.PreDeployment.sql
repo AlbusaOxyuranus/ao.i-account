@@ -9,11 +9,5 @@
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-use [i-account.db]
-GO
---EXECUTE \Sctipts\DDL - iaccount - dbo.Contact.sql
---EXECUTE \Sctipts\DDL - iaccount - dbo.Service.sql
---EXECUTE \Sctipts\DDL - iaccount - dbo.User.sql
---EXECUTE \Sctipts\DDL - iaccount - dbo.UserContact_xref.sql
---EXECUTE \Sctipts\DDL - iaccount - dbo.UserService_xref.sql
-	
+--SQLCMD -E -dEmployee -ic:DDL - iaccount - dbo.Contact.sql
+--PAUSE

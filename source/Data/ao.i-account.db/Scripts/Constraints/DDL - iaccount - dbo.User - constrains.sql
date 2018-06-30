@@ -5,4 +5,10 @@ go
 
 alter table dbo.[User]
 	add constraint DF_User_modified_date default (getdate()) for modified_date
-go
+
+--ALTER TABLE dbo.[User]   
+--ADD CONSTRAINT AK_Username UNIQUE ([username]);   
+--GO 
+GO
+
+

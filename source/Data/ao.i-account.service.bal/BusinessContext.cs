@@ -10,6 +10,7 @@ namespace ao.i_account.service.bal
         {
             var connectionString = mode.ConnectionString;
             DataContext = new DataContext(connectionString);
+            Database = new Database(connectionString);
         }
 
         private IDataContext DataContext { get; }
@@ -55,5 +56,7 @@ namespace ao.i_account.service.bal
         {
             throw new NotImplementedException();
         }
+
+        public Database Database { get; }
     }
 }

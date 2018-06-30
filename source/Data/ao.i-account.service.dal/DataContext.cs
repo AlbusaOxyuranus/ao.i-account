@@ -37,6 +37,7 @@ namespace ao.i_account.service.dal
 
                 var id = int.Parse(insertedId.ToString());
                 entity.SetId(id);
+                connection.Close();
                 return entity;
             }
         }
@@ -63,6 +64,7 @@ namespace ao.i_account.service.dal
                 }
 
                 var result = Serializer.DeserializeDataContract<List<TEntity>>(getObject.ToString());
+                connection.Close();
                 return result[0];
             }
         }

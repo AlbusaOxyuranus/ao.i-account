@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ao.i_account.service.bal.tests
 {
     [TestClass]
-    public class BusinessContextTests
+    public class BusinessContextTests //: FunctionalTest
     {
         [TestMethod]
         public void BusinessContext_IsClass_Test()
