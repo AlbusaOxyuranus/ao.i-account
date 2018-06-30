@@ -17,7 +17,7 @@ namespace UnitTestProject1
         public void GetUser_Test()
         {
             var client = new AccountServiceClient();
-            var user = client.CreateUser(new User {Username = "denis-service", Password = "password"});
+            var user = client.CreateUser(new User { Username = "denis-service", Password = "password"});
             client.GetUser(user.UserId);
         }
     }
