@@ -77,6 +77,9 @@
     <None Include="Connected Services\AccountServiceReference\UnitTestProject1.AccountServiceReference.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\AccountServiceReference\UnitTestProject1.AccountServiceReference.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

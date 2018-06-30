@@ -47,6 +47,13 @@ namespace ao.i_account.service.bal.tests
         [TestMethod]
         public void Get_Test()
         {
+            using (var bc = new BusinessContext(new TestMode()))
+            {
+                var resultObject = bc.Add(new User { Username = "Denis", Password = "999" });
+                var result = bc.Get<User,int>(resultObject.UserId);
+                Assert.IsNotNull(result);
+                Assert.IsTrue(result.UserId > 0);
+            }
         }
     }
 }

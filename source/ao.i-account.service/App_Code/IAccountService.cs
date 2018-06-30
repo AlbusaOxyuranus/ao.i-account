@@ -7,10 +7,10 @@ using ao.i_account.service.models;
 public interface IAccountService
 {
     [OperationContract]
-    void CreateUser(User user);
+    User CreateUser(User user);
 
     [OperationContract]
-    void GetUser(User user);
+    void GetUser(int id);
 
     [OperationContract]
     void UpdateUser(User user);
@@ -21,8 +21,6 @@ public interface IAccountService
 
     [OperationContract]
     CompositeType GetDataUsingDataContract(CompositeType composite);
-
-    // TODO: Add your service operations here
 }
 
 // Use a data contract as illustrated in the sample below to add composite types to service operations.

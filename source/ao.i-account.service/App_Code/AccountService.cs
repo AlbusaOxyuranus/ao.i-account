@@ -7,17 +7,20 @@ using ao.i_account.service.models;
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "AccountService" in code, svc and config file together.
 public class AccountService : IAccountService
 {
-    public void CreateUser(User user)
+    public User CreateUser(User user)
     {
         using (var bc = new BusinessContext(new DbMode()))
         {
-            bc.Add(user);
+           return bc.Add(user);
         }
     }
 
-    public void GetUser(User user)
+    public void GetUser(int id)
     {
-        throw new NotImplementedException();
+        using (var bc = new BusinessContext(new DbMode()))
+        {
+            bc.Get<User, int>(id);
+        }
     }
 
     public void UpdateUser(User user)

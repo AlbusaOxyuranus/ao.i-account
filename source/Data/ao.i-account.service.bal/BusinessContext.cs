@@ -41,17 +41,17 @@ namespace ao.i_account.service.bal
            return DataContext.Insert(entity);
         }
 
-        public TIEntity Get<TIEntity>()
+        public TEntity Get<TEntity,TGetType>(TGetType id)
+        {
+            return DataContext.Get<TEntity, TGetType>(id);
+        }
+
+        public void Update<TEntity>()
         {
             throw new NotImplementedException();
         }
 
-        public void Update<TIEntity>()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete<TIEntity>()
+        public void Delete<TEntity>()
         {
             throw new NotImplementedException();
         }

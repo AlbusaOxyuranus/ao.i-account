@@ -156,16 +156,16 @@ namespace UnitTestProject1.AccountServiceReference {
     public interface IAccountService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateUser", ReplyAction="http://tempuri.org/IAccountService/CreateUserResponse")]
-        void CreateUser(UnitTestProject1.AccountServiceReference.User user);
+        UnitTestProject1.AccountServiceReference.User CreateUser(UnitTestProject1.AccountServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateUser", ReplyAction="http://tempuri.org/IAccountService/CreateUserResponse")]
-        System.Threading.Tasks.Task CreateUserAsync(UnitTestProject1.AccountServiceReference.User user);
+        System.Threading.Tasks.Task<UnitTestProject1.AccountServiceReference.User> CreateUserAsync(UnitTestProject1.AccountServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetUser", ReplyAction="http://tempuri.org/IAccountService/GetUserResponse")]
-        void GetUser(UnitTestProject1.AccountServiceReference.User user);
+        void GetUser(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetUser", ReplyAction="http://tempuri.org/IAccountService/GetUserResponse")]
-        System.Threading.Tasks.Task GetUserAsync(UnitTestProject1.AccountServiceReference.User user);
+        System.Threading.Tasks.Task GetUserAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/UpdateUser", ReplyAction="http://tempuri.org/IAccountService/UpdateUserResponse")]
         void UpdateUser(UnitTestProject1.AccountServiceReference.User user);
@@ -213,20 +213,20 @@ namespace UnitTestProject1.AccountServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void CreateUser(UnitTestProject1.AccountServiceReference.User user) {
-            base.Channel.CreateUser(user);
+        public UnitTestProject1.AccountServiceReference.User CreateUser(UnitTestProject1.AccountServiceReference.User user) {
+            return base.Channel.CreateUser(user);
         }
         
-        public System.Threading.Tasks.Task CreateUserAsync(UnitTestProject1.AccountServiceReference.User user) {
+        public System.Threading.Tasks.Task<UnitTestProject1.AccountServiceReference.User> CreateUserAsync(UnitTestProject1.AccountServiceReference.User user) {
             return base.Channel.CreateUserAsync(user);
         }
         
-        public void GetUser(UnitTestProject1.AccountServiceReference.User user) {
-            base.Channel.GetUser(user);
+        public void GetUser(int id) {
+            base.Channel.GetUser(id);
         }
         
-        public System.Threading.Tasks.Task GetUserAsync(UnitTestProject1.AccountServiceReference.User user) {
-            return base.Channel.GetUserAsync(user);
+        public System.Threading.Tasks.Task GetUserAsync(int id) {
+            return base.Channel.GetUserAsync(id);
         }
         
         public void UpdateUser(UnitTestProject1.AccountServiceReference.User user) {

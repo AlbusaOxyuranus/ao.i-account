@@ -67,5 +67,6 @@
     <Build Include="Sctipts\DDL - iaccount - dbo.Contact.sql" />
     <Build Include="dbo\Programmability\DDL - iaccount - usp - Insert_User.sql" />
     <Build Include="Sctipts\Constraints\DDL - iaccount - dbo.User - constrains.sql" />
+    <Build Include="dbo\Programmability\DDL - iaccount - usp - Get_User.sql" />
   </ItemGroup>
 </Project>

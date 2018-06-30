@@ -19,8 +19,19 @@ namespace ao.i_account.service.dal
                 {
                     {"@username", (entity as User)?.Username},
                     {"@password", (entity as User)?.Password}
-                },
-                
+                }
+            };
+        }
+
+        public static UspBase GetOperation<TGetType>(TGetType id)
+        {
+            return new UserUspBase
+            {
+                NameUsp = "usp_Get_User",
+                Parameters =
+                {
+                    {"@userId", id}
+                }
             };
         }
     }
