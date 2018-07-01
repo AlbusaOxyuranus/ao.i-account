@@ -7,7 +7,7 @@ namespace ao.i_account.service.bal
     public interface IBusinessContext : IDisposable
     {
         TEntity Add<TEntity>(TEntity entity) where TEntity : class, IEntity;
-        TEntity Get<TEntity, TGetType>(TGetType id) where TEntity : IEntity;
+        TEntity Get<TEntity, TGetType>(TGetType id) where TEntity : class;
         void Update<TIEntity>();
         void Delete<TIEntity>();
         Database Database { get; }

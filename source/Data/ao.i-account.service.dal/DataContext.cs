@@ -42,7 +42,7 @@ namespace ao.i_account.service.dal
             }
         }
 
-        public TEntity Get<TEntity, TGetType>(TGetType id) where TEntity : IEntity
+        public TEntity Get<TEntity, TGetType>(TGetType id) where TEntity : class 
         {
             var usp = Mapper.GetOperation<TEntity, TGetType>(id);
             using (var connection = new SqlConnection(_connectionString))

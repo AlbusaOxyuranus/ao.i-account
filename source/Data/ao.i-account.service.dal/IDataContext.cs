@@ -6,6 +6,6 @@ namespace ao.i_account.service.dal
     public interface IDataContext : IDisposable
     {
         TEntity Insert<TEntity>(TEntity entity) where TEntity : class, IEntity;
-        TEntity Get<TEntity, TGetType>(TGetType id) where TEntity : IEntity;
+        TEntity Get<TEntity, TGetType>(TGetType id) where TEntity : class;
     }
 }

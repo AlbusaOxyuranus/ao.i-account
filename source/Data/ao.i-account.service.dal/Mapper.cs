@@ -23,7 +23,7 @@ namespace ao.i_account.service.dal
 
         }
 
-        public static UspBase GetOperation<TEntity, TGetType>(TGetType id) where TEntity:IEntity
+        public static UspBase GetOperation<TEntity, TGetType>(TGetType id) where TEntity:class 
         {
             var type = _mapDictionary.Single(x => x.Key == typeof(TEntity)).Value;
             var sp = Activator.CreateInstance(type, Operation.Get);
