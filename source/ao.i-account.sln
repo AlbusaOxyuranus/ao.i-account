@@ -50,6 +50,10 @@ Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "ao.i-account.ps", "ao.i-acc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i-account.service.tests", "..\tests\ao.i-account.service.tests\ao.i-account.service.tests.csproj", "{D13E882E-E9E8-4439-A38A-821EE10BB428}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK", "SDK", "{17A3D33F-6F96-4776-B388-E5DD0D34A618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ao.i_account.service.sdk", "SDK\ao.i_account.service.sdk\ao.i_account.service.sdk.csproj", "{0F895680-7C18-4C47-8FC6-37509B3FB4E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +102,10 @@ Global
 		{D13E882E-E9E8-4439-A38A-821EE10BB428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D13E882E-E9E8-4439-A38A-821EE10BB428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D13E882E-E9E8-4439-A38A-821EE10BB428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F895680-7C18-4C47-8FC6-37509B3FB4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F895680-7C18-4C47-8FC6-37509B3FB4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F895680-7C18-4C47-8FC6-37509B3FB4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F895680-7C18-4C47-8FC6-37509B3FB4E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +120,7 @@ Global
 		{E0712F81-32F8-4CD7-A109-CA05EF623472} = {BA5B932E-5B98-487D-B423-D8B9AF5BD399}
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51} = {785FDE6D-EE87-463A-81B8-CA6A654DA238}
 		{D13E882E-E9E8-4439-A38A-821EE10BB428} = {BA5B932E-5B98-487D-B423-D8B9AF5BD399}
+		{0F895680-7C18-4C47-8FC6-37509B3FB4E1} = {17A3D33F-6F96-4776-B388-E5DD0D34A618}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36A9A7C8-5996-4803-BE0A-C0FD6C6FCBB5}
