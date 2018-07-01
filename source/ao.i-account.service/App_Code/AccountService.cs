@@ -15,11 +15,11 @@ public class AccountService : IAccountService
         }
     }
 
-    public void GetUser(int id)
+    public User GetUser(int id)
     {
         using (var bc = new BusinessContext(new DbMode()))
         {
-            bc.Get<User, int>(id);
+           return bc.Get<User, int>(id);
         }
     }
 

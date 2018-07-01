@@ -19,7 +19,8 @@ namespace ao.i_account.service.tests
         {
             var client = new AccountServiceClient();
             var user = client.CreateUser(new User { Username = "denis-service", Password = "password"});
-            client.GetUser(user.Id);
+            var getUser = client.GetUser(user.Id);
+            Assert.IsNotNull(getUser);
         }
 
         [TestMethod]

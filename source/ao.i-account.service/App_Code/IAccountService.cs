@@ -10,7 +10,7 @@ public interface IAccountService
     User CreateUser(User user);
 
     [OperationContract]
-    void GetUser(int id);
+    User GetUser(int id);
 
     [OperationContract]
     Service CreateService(Service service);

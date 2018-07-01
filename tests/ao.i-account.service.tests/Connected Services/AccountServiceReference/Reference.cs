@@ -85,10 +85,10 @@ namespace ao.i_account.service.tests.AccountServiceReference {
         System.Threading.Tasks.Task<ao.i_account.service.models.User> CreateUserAsync(ao.i_account.service.models.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetUser", ReplyAction="http://tempuri.org/IAccountService/GetUserResponse")]
-        void GetUser(int id);
+        ao.i_account.service.models.User GetUser(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetUser", ReplyAction="http://tempuri.org/IAccountService/GetUserResponse")]
-        System.Threading.Tasks.Task GetUserAsync(int id);
+        System.Threading.Tasks.Task<ao.i_account.service.models.User> GetUserAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateService", ReplyAction="http://tempuri.org/IAccountService/CreateServiceResponse")]
         ao.i_account.service.models.Service CreateService(ao.i_account.service.models.Service service);
@@ -156,11 +156,11 @@ namespace ao.i_account.service.tests.AccountServiceReference {
             return base.Channel.CreateUserAsync(user);
         }
         
-        public void GetUser(int id) {
-            base.Channel.GetUser(id);
+        public ao.i_account.service.models.User GetUser(int id) {
+            return base.Channel.GetUser(id);
         }
         
-        public System.Threading.Tasks.Task GetUserAsync(int id) {
+        public System.Threading.Tasks.Task<ao.i_account.service.models.User> GetUserAsync(int id) {
             return base.Channel.GetUserAsync(id);
         }
         
