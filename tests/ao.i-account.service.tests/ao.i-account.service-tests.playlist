@@ -1,0 +1,1 @@
+<Playlist Version="1.0"><Add Test="ao.i_account.service.tests.AccountServiceTests.CreateService_Test" /><Add Test="ao.i_account.service.tests.AccountServiceTests.GetService_Test" /><Add Test="ao.i_account.service.tests.AccountServiceTests.GetUser_Test" /><Add Test="ao.i_account.service.tests.AccountServiceTests.CreateUser_Test" /></Playlist>

@@ -77,10 +77,9 @@
     <None Include="Connected Services\AccountServiceReference\ao.i_account.service.tests.AccountServiceReference.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\AccountServiceReference\ao.i_account.service.tests.AccountServiceReference.User.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ao.i_account.service.models.Service.datasource" />
+    <None Include="Properties\DataSources\ao.i_account.service.models.User.datasource" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -102,6 +101,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\source\Data\ao.i-account.service.models\ao.i-account.service.models.csproj">
+      <Project>{75EBBE5D-B7DD-47AF-8055-87ADB8A1E889}</Project>
+      <Name>ao.i-account.service.models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

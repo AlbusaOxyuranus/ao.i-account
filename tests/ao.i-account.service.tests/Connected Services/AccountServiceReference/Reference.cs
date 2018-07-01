@@ -15,83 +15,6 @@ namespace ao.i_account.service.tests.AccountServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/ao.i_account.service.models")]
-    [System.SerializableAttribute()]
-    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsernameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password {
-            get {
-                return this.PasswordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
-                    this.PasswordField = value;
-                    this.RaisePropertyChanged("Password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Username {
-            get {
-                return this.UsernameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
-                    this.UsernameField = value;
-                    this.RaisePropertyChanged("Username");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/")]
     [System.SerializableAttribute()]
     public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -156,10 +79,10 @@ namespace ao.i_account.service.tests.AccountServiceReference {
     public interface IAccountService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateUser", ReplyAction="http://tempuri.org/IAccountService/CreateUserResponse")]
-        ao.i_account.service.tests.AccountServiceReference.User CreateUser(ao.i_account.service.tests.AccountServiceReference.User user);
+        ao.i_account.service.models.User CreateUser(ao.i_account.service.models.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateUser", ReplyAction="http://tempuri.org/IAccountService/CreateUserResponse")]
-        System.Threading.Tasks.Task<ao.i_account.service.tests.AccountServiceReference.User> CreateUserAsync(ao.i_account.service.tests.AccountServiceReference.User user);
+        System.Threading.Tasks.Task<ao.i_account.service.models.User> CreateUserAsync(ao.i_account.service.models.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetUser", ReplyAction="http://tempuri.org/IAccountService/GetUserResponse")]
         void GetUser(int id);
@@ -167,11 +90,23 @@ namespace ao.i_account.service.tests.AccountServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetUser", ReplyAction="http://tempuri.org/IAccountService/GetUserResponse")]
         System.Threading.Tasks.Task GetUserAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/UpdateUser", ReplyAction="http://tempuri.org/IAccountService/UpdateUserResponse")]
-        void UpdateUser(ao.i_account.service.tests.AccountServiceReference.User user);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateService", ReplyAction="http://tempuri.org/IAccountService/CreateServiceResponse")]
+        ao.i_account.service.models.Service CreateService(ao.i_account.service.models.Service service);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateService", ReplyAction="http://tempuri.org/IAccountService/CreateServiceResponse")]
+        System.Threading.Tasks.Task<ao.i_account.service.models.Service> CreateServiceAsync(ao.i_account.service.models.Service service);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetService", ReplyAction="http://tempuri.org/IAccountService/GetServiceResponse")]
+        void GetService(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetService", ReplyAction="http://tempuri.org/IAccountService/GetServiceResponse")]
+        System.Threading.Tasks.Task GetServiceAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/UpdateUser", ReplyAction="http://tempuri.org/IAccountService/UpdateUserResponse")]
-        System.Threading.Tasks.Task UpdateUserAsync(ao.i_account.service.tests.AccountServiceReference.User user);
+        void UpdateUser(ao.i_account.service.models.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/UpdateUser", ReplyAction="http://tempuri.org/IAccountService/UpdateUserResponse")]
+        System.Threading.Tasks.Task UpdateUserAsync(ao.i_account.service.models.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetData", ReplyAction="http://tempuri.org/IAccountService/GetDataResponse")]
         string GetData(int value);
@@ -213,11 +148,11 @@ namespace ao.i_account.service.tests.AccountServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public ao.i_account.service.tests.AccountServiceReference.User CreateUser(ao.i_account.service.tests.AccountServiceReference.User user) {
+        public ao.i_account.service.models.User CreateUser(ao.i_account.service.models.User user) {
             return base.Channel.CreateUser(user);
         }
         
-        public System.Threading.Tasks.Task<ao.i_account.service.tests.AccountServiceReference.User> CreateUserAsync(ao.i_account.service.tests.AccountServiceReference.User user) {
+        public System.Threading.Tasks.Task<ao.i_account.service.models.User> CreateUserAsync(ao.i_account.service.models.User user) {
             return base.Channel.CreateUserAsync(user);
         }
         
@@ -229,11 +164,27 @@ namespace ao.i_account.service.tests.AccountServiceReference {
             return base.Channel.GetUserAsync(id);
         }
         
-        public void UpdateUser(ao.i_account.service.tests.AccountServiceReference.User user) {
+        public ao.i_account.service.models.Service CreateService(ao.i_account.service.models.Service service) {
+            return base.Channel.CreateService(service);
+        }
+        
+        public System.Threading.Tasks.Task<ao.i_account.service.models.Service> CreateServiceAsync(ao.i_account.service.models.Service service) {
+            return base.Channel.CreateServiceAsync(service);
+        }
+        
+        public void GetService(int id) {
+            base.Channel.GetService(id);
+        }
+        
+        public System.Threading.Tasks.Task GetServiceAsync(int id) {
+            return base.Channel.GetServiceAsync(id);
+        }
+        
+        public void UpdateUser(ao.i_account.service.models.User user) {
             base.Channel.UpdateUser(user);
         }
         
-        public System.Threading.Tasks.Task UpdateUserAsync(ao.i_account.service.tests.AccountServiceReference.User user) {
+        public System.Threading.Tasks.Task UpdateUserAsync(ao.i_account.service.models.User user) {
             return base.Channel.UpdateUserAsync(user);
         }
         

@@ -23,6 +23,22 @@ public class AccountService : IAccountService
         }
     }
 
+    public Service CreateService(Service service)
+    {
+        using (var bc = new BusinessContext(new DbMode()))
+        {
+            return bc.Add(service);
+        }
+    }
+
+    public void GetService(int id)
+    {
+        using (var bc = new BusinessContext(new DbMode()))
+        {
+            bc.Get<Service, int>(id);
+        }
+    }
+
     public void UpdateUser(User user)
     {
         throw new NotImplementedException();

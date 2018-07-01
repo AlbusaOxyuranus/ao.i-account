@@ -13,6 +13,12 @@ public interface IAccountService
     void GetUser(int id);
 
     [OperationContract]
+    Service CreateService(Service service);
+
+    [OperationContract]
+    void GetService(int id);
+
+    [OperationContract]
     void UpdateUser(User user);
 
 

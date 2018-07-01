@@ -20,6 +20,18 @@
   <wsdl:message name="IAccountService_GetUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IAccountService_CreateService_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateService" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_CreateService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_GetService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetService" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_GetService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceResponse" />
+  </wsdl:message>
   <wsdl:message name="IAccountService_UpdateUser_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUser" />
   </wsdl:message>
@@ -47,6 +59,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/GetUser" message="tns:IAccountService_GetUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/GetUserResponse" message="tns:IAccountService_GetUser_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="CreateService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/CreateService" message="tns:IAccountService_CreateService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/CreateServiceResponse" message="tns:IAccountService_CreateService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/GetService" message="tns:IAccountService_GetService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/GetServiceResponse" message="tns:IAccountService_GetService_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/UpdateUser" message="tns:IAccountService_UpdateUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/UpdateUserResponse" message="tns:IAccountService_UpdateUser_OutputMessage" />
@@ -73,6 +93,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetUser">
       <soap:operation soapAction="http://tempuri.org/IAccountService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateService">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/CreateService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetService">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/GetService" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
