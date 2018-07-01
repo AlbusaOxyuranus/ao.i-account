@@ -2,6 +2,6 @@
 {
     public interface IEntity
     {
-        void SetId(int id);
+        int Id { get; set; }
     }
 }

@@ -86,5 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="DDL - iaccount - Initialization.sql" />
+    <None Include="dbo\Programmability\Stored Procedures\DDL - iaccount - usp - Get_Service.sql" />
+    <None Include="dbo\Programmability\Stored Procedures\DDL - iaccount - usp - Insert_Service.sql" />
   </ItemGroup>
 </Project>

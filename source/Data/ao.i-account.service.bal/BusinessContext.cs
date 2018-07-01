@@ -42,7 +42,7 @@ namespace ao.i_account.service.bal
            return DataContext.Insert(entity);
         }
 
-        public TEntity Get<TEntity,TGetType>(TGetType id)
+        public TEntity Get<TEntity,TGetType>(TGetType id) where TEntity : IEntity
         {
             return DataContext.Get<TEntity, TGetType>(id);
         }

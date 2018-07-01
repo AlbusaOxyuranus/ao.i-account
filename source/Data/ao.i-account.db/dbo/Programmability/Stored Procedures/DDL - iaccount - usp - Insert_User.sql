@@ -4,8 +4,7 @@ go
 
 create procedure dbo.usp_Insert_User
 (	
-	@username nvarchar(256),
-	@password nvarchar(256)
+	@json nvarchar(max)
 ) as
 begin
 	insert into dbo.[User] 
@@ -14,12 +13,18 @@ begin
 	pwd,
 	create_date
 	)
-	values
+	select 
+		username, 
+		pwd, 
+		getdate()
+	from openjson(@json)
+	with
 	(
-		@username,
-		@password,
-		getdate()		
+		username nvarchar(250) N'strict $."Username"',
+		pwd nvarchar(250) N'strict $."Password"'
+	
 	)
+
 	select scope_identity()	
 end
 go

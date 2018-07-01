@@ -4,11 +4,11 @@ go
 
 create procedure dbo.usp_Get_User
 (	
-	@userId int
+	@id int
 ) as
 begin
 	
-	select top (1) u.[userId] as UserId, u.username as Username, u.pwd as Password  from dbo.[User] as u where u.[userId]= @userid
+	select top (1) u.[userId] as Id, u.username as Username, u.pwd as Password  from dbo.[User] as u where u.[userId]= @id
 	for json path
 end
 go

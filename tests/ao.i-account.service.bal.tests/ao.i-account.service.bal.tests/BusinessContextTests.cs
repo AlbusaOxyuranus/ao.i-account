@@ -1,4 +1,5 @@
-﻿using ao.i_account.service.models;
+﻿using System.Collections.Generic;
+using ao.i_account.service.models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ao.i_account.service.bal.tests
@@ -33,14 +34,34 @@ namespace ao.i_account.service.bal.tests
         public void DeleteEntity_Test()
         {
         }
+        [TestMethod]
+        public void InsertAllObjectDb_Test()
+        {
+            var listObject = new List<IEntity>()
+            {
+                new User { Username = "Denis2", Password = "999" },
+                new Service { NameService = "AO-service-report"}
+
+            };
+            using (var bc = new BusinessContext(new TestMode()))
+            {
+                foreach (var objEntity in listObject)
+                {
+                    var resultObject = bc.Add(objEntity);
+                    Assert.IsTrue(resultObject.Id > 0);
+                }
+                
+            }
+        }
 
         [TestMethod]
         public void InsertEntity_Test()
         {
+  
             using (var bc = new BusinessContext(new TestMode()))
             {
                 var resultObject = bc.Add(new User {Username = "Denis", Password = "999"});
-                Assert.IsTrue(resultObject.UserId > 0);
+                Assert.IsTrue(resultObject.Id > 0);
             }
         }
 
@@ -50,9 +71,9 @@ namespace ao.i_account.service.bal.tests
             using (var bc = new BusinessContext(new TestMode()))
             {
                 var resultObject = bc.Add(new User { Username = "Denis", Password = "999" });
-                var result = bc.Get<User,int>(resultObject.UserId);
+                var result = bc.Get<User,int>(resultObject.Id);
                 Assert.IsNotNull(result);
-                Assert.IsTrue(result.UserId > 0);
+                Assert.IsTrue(result.Id > 0);
             }
         }
     }

@@ -36,15 +36,15 @@ namespace ao.i_account.service.dal
                 }
 
                 var id = int.Parse(insertedId.ToString());
-                entity.SetId(id);
+                entity.Id=id;
                 connection.Close();
                 return entity;
             }
         }
 
-        public TEntity Get<TEntity, TGetType>(TGetType id)
+        public TEntity Get<TEntity, TGetType>(TGetType id) where TEntity : IEntity
         {
-            var usp = Mapper.GetOperation(id);
+            var usp = Mapper.GetOperation<TEntity, TGetType>(id);
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();

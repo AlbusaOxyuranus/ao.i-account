@@ -3,7 +3,6 @@
 
 CREATE TABLE [dbo].[Service](
 	[serviceId] [int] IDENTITY(1,1) NOT NULL,
-	[userId] [int] NOT NULL,
 	[create_date] [datetime] NULL,
 	[nameService] [nchar](250) NULL,
 	[modified_date] [datetime] NULL,

@@ -2,5 +2,8 @@
 {
     public abstract class UspParam : UspBase
     {
+        protected UspParam(Operation operation) : base(operation)
+        {
+        }
     }
 }
