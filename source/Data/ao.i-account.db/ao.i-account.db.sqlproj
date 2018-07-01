@@ -88,5 +88,6 @@
     <Build Include="DDL - iaccount - Initialization.sql" />
     <None Include="dbo\Programmability\Stored Procedures\DDL - iaccount - usp - Get_Service.sql" />
     <None Include="dbo\Programmability\Stored Procedures\DDL - iaccount - usp - Insert_Service.sql" />
+    <None Include="Scripts\Constraints\DDL - iaccount - dbo.Service- constrains.sql" />
   </ItemGroup>
 </Project>

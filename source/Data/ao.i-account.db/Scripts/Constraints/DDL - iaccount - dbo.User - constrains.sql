@@ -1,5 +1,5 @@
 ﻿if object_id('DF_User_modified_date') is not null
-	alter table dbo.Person
+	alter table dbo.[User]
 		drop constraint DF_User_modified_date
 go
 
