@@ -4,9 +4,14 @@
 # Date: 06.06.2018
 # Version: 0.1
 #
-
+param(
+[string]$DBName
+)
+echo "==========================================================================================================="
+echo $DBName
 $servername="WINSTATION";
-$DBName="i-account-tests.db"
+#$DBName="i-account-tests.db"
+#$DBName="i-account.db"
 #$Username="dionis_999@hotmail.com";
 #$Password="ps";
 

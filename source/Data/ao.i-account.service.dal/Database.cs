@@ -8,6 +8,7 @@ namespace ao.i_account.service.dal
 
         public Database(string connectionString)
         {
+            _connectionString = connectionString;
             _connectionString = "Data Source=WINSTATION;Integrated Security=True"; //connectionString;
         }
 
