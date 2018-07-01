@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessContextPrepareDatabase_Tests.cs" />
     <Compile Include="BusinessContextTests.cs" />
     <Compile Include="FunctionalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
